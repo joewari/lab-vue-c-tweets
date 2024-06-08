@@ -1,11 +1,11 @@
 <template>
-  <img :src="childImage" class="profile" alt="profile" />
+  <img :src="image" class="profile" alt="profile" />
 </template>
 
 <script setup>
 import { ref, reactive, computed } from "vue";
 defineProps({
-  childImage: {
+  image: {
     type: String,
   },
 });

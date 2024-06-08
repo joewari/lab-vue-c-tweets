@@ -1,18 +1,17 @@
 <template>
   <div class="tweet">
-    <ProfileImg :childImage="Image" />
+    <ProfileImg :image="image" />
 
     <div class="body">
       <div class="top">
         <span class="user">
-          <User :nameChild="Name" />
-          <User :handleChild="Handle" />
+          <User :userdata="user" />
         </span>
 
-        <Time :timeStampChild="TimeStamp" />
+        <Time :timeStamp="time" />
       </div>
 
-      <Message :childMessage="message" />
+      <Message :msg="message" />
 
       <Action />
     </div>
@@ -32,13 +31,13 @@ import User from "./User.vue";
 import Time from "./Timestamp.vue";
 import ProfileImg from "./ProfileImage.vue";
 import Action from "./Actions.vue";
+
 defineProps({
-  Name: {
-    type: String,
+  user: {
+    type: Object,
   },
-  Image: { type: String },
-  Handle: { type: String },
-  TimeStamp: { type: String },
+  image: { type: String },
+  time: { type: String },
   message: { type: String },
 });
 </script>

@@ -1,11 +1,11 @@
 <template>
-  <span class="timestamp">{{ timeStampChild }}</span>
+  <span class="timestamp">{{ timeStamp }}</span>
 </template>
 
 <script setup>
 import { ref, reactive, computed } from "vue";
 defineProps({
-  timeStampChild: {
+  timeStamp: {
     type: String,
   },
 });
